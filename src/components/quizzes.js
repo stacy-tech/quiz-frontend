@@ -10,4 +10,5 @@ class Quizzes {
             console.log(quizzes)
         })
     }
+
 }
