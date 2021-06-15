@@ -6,10 +6,10 @@ class Quizzes {
     }
 
     fetchAndLoadQuizzes() {
-        this.adapter.getQuizzes()
-        .then(quizzes => {
+        this.adapter.getQuizzes().then(quizzes => {
             console.log(quizzes)
         })
     }
 
+    
 }
