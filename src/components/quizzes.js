@@ -6,11 +6,9 @@ class Quizzes {
     }
 
     fetchAndLoadQuizzes() {
-        this.adapter
-        .getQuizzes()
+        this.adapter.getQuizzes()
         .then(quizzes => {
-        //    return console.log(quizzes)
-            quizzes.forEach(quiz => this.quizzes.push(quiz))
+            quizzes.forEach(quiz => this.quizzes.push(quiz.js_questions))       
         })
         .then(() => {
             this.render()
@@ -18,9 +16,9 @@ class Quizzes {
     }
 
     render() {
-        const quizzesContainer = document.getElementById('quizzes-container')
-        quizzesContainer.innerHTML = 'Test your knowledge of JavaScript'
-        console.log('JavaScript Quiz', this.quizzes) 
+        // const quizzesContainer = document.getElementById('quizzes-container')
+        // quizzesContainer.innerHTML = `<p>Questions: ${Quizzes.js_questions}</p>`
+        // console.log(this.quizzes);
     }
 
     
