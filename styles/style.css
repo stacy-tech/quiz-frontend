@@ -1,8 +1,8 @@
 
-/* h1 {
+/* /* h1 {
     text-align: top, center;
 } */
-
+/* 
 :root {
     --hue-neutral: 200;
     --hue-wrong: 0;
@@ -33,18 +33,18 @@ body.correct {
 
 body.wrong {
     --hue: var(--hue-wrong);
-}
+} */
 
-.container {
+/* .container {
     width: 800px;
     max-width: 80%;
     background-color: white;
     border-radius: 5px;
     padding: 10px;
     box-shadow: 0 0 10px 2px;
-}
+} */
 
-.btn-grid {
+/* .btn-grid {
     display: grid;
     gap: 10px;   
 }
@@ -57,4 +57,4 @@ body.wrong {
     padding: 5px 10px;
     color: white;
     outline: none;
-}
+} */ 
