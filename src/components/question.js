@@ -8,11 +8,9 @@ class Question{
         this.option1 = option1
         this.option2 = option2
         Question.questions.push(this)
-        // this.baseUrl = "http://localhost:3000/js_questions"
+       
     }
 
-    // getQuestion() {
-    //     return fetch(this.baseUrl).then(res => res.json())
-    // }
+    
     
 }
