@@ -9,8 +9,8 @@ class Question{
         this.option2 = option2
         Question.questions.push(this)
        
-    }
-
-    
-    
+    }     
 }
+
+
+

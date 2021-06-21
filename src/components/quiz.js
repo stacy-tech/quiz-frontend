@@ -49,8 +49,9 @@ class Quiz {
                         <button class="btn">${question.option2}</button>
                         <button class="btn">${question.answer}</button>
                     </div>
+
                 </li>
             `
-        })
+        }) 
     }
 }
