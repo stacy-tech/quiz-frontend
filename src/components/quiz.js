@@ -32,12 +32,12 @@ class Quiz {
         console.log(questionId)
         var currentQuestionList = Question.questions.filter(question => question.id === questionId)
         if(currentQuestionList[0].answer === chosenAnswer) {
-            alert('Correct')
+            // alert('Correct')
             event.target.style.background = 'yellow'
             Quiz.score += 1
         }
         else {
-            alert('Incorrect')
+            // alert('Incorrect')
             event.target.style.background = 'red'
             Quiz.score -= 1
         }
