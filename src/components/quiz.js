@@ -41,14 +41,14 @@ class Quiz {
             event.target.style.background = 'red'
             Quiz.score -= 1
         }
-        debugger
+        
         Array.from(event.target.parentElement.children).forEach(element => {
             element.removeEventListener('click', () => console.log("click"))
             
         });
         
 
-        console.log('result', this.result)
+        // console.log('result', this.result)
     }
 
     
