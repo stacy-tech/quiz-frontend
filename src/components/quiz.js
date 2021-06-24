@@ -22,7 +22,8 @@ class Quiz {
         div.addEventListener("click", this.renderQuestions.bind(this))
 
         document.querySelector(".container").appendChild(div)
-    
+        
+        
     }
 
     answerQuestion(event) {
@@ -62,8 +63,9 @@ class Quiz {
                 <button id="score-btn" class="score-btn btn">Score</button>
                 <ul></ul>
                 
-
             </div>
+
+            <button id="done-btn" class="done-btn btn"><a href ="/results">Done</a></button>
             
     
         `
@@ -90,6 +92,7 @@ class Quiz {
         for (var i = 0; i < answerButtonClass.length; i++) {
             answerButtonClass[i].addEventListener('click', this.answerQuestionRef)
         }
+
 
     }
 }
