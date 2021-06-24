@@ -65,7 +65,7 @@ class Quiz {
                 
             </div>
 
-            <button id="done-btn" class="done-btn btn"><a href ="/results">Done</a></button>
+            <button id="done-btn" class="done-btn btn"><a href ="(this.baseUrl + "/results")">Done</a></button>
             
     
         `
