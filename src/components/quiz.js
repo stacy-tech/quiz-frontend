@@ -5,6 +5,7 @@ class Quiz {
         this.name = name
         this.id = id
         this.description = description
+        this.answerQuestionRef = this.answerQuestion.bind(this)
         Quiz.quizzes.push(this)
     }
 
@@ -42,13 +43,13 @@ class Quiz {
             Quiz.score -= 1
         }
         
+
         Array.from(event.target.parentElement.children).forEach(element => {
-            element.removeEventListener('click', () => console.log("click"))
+            element.removeEventListener('click', this.answerQuestionRef)
             
         });
         
 
-        // console.log('result', this.result)
     }
 
     
@@ -87,7 +88,7 @@ class Quiz {
 
         var answerButtonClass = document.getElementsByClassName("answerBtn")
         for (var i = 0; i < answerButtonClass.length; i++) {
-            answerButtonClass[i].addEventListener('click', this.answerQuestion.bind(this))
+            answerButtonClass[i].addEventListener('click', this.answerQuestionRef)
         }
 
     }

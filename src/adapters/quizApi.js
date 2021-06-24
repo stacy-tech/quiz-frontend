@@ -1,11 +1,11 @@
 class QuizApi {
 
     constructor() {
-        this.baseUrl = "http://localhost:3000/quizzes"
+        this.baseUrl = "http://localhost:3000"
     }
 
     getQuizzes() {
-        fetch(this.baseUrl)
+        fetch(this.baseUrl + "/quizzes")
         .then(res => res.json())
         .then (quizzes => quizzes.forEach(quiz => {
             const quizObject = new Quiz(quiz)
@@ -16,4 +16,18 @@ class QuizApi {
             
         }))
     }
+
+
+    getResults() {
+        
+        fetch(this.baseUrl + "/results")
+        .then(res => res.json())
+        .then (results => results.forEach(result=> {
+            const resultObject = new Result(result)
+            quizObject.render()
+            
+        })) 
+    }
+
+    
 }
