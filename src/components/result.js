@@ -23,9 +23,7 @@ class Result {
         Result.results.map((result) => {
             console.log("result", result)
             highScoresTable.innerHTML += "<tr><td>" +  result.name  + "</td><td>" + result.score + "</td></tr>"
-            // let newResultRow= document.createElement("tr")
-            // let newNameColumn = document.createElement("td")
-            // let newScoreColumn = document.createElement("td")
+            
         })
         
         div.append(highScoresTable)
