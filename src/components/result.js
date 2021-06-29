@@ -1,6 +1,8 @@
-class Result {
+class Result{
     static results = []
-    constructor({name, score}) {
+    constructor({quiz_id, id, name, score }) {
+        this.quiz_id = quiz_id
+        this.id = id
         this.name = name
         this.score = score
         Result.results.push(this)
@@ -9,14 +11,14 @@ class Result {
     render() {
         
         const div = document.createElement("div") 
-        const h2 = document.createElement("h2")
+        const h4 = document.createElement("h4")
         const p = document.createElement("p")
         var highScoresTable = document.createElement("table")
         highScoresTable.innerHTML += "<tr><th>Name</th><th>Score</th></tr>"
 
         div.id = `high-scores`
-        h2.innerHTML= `High Scores`
-        div.appendChild(h2)
+        h4.innerHTML= `High Scores`
+        div.appendChild(h4)
         div.appendChild(p)
 
 
@@ -29,8 +31,11 @@ class Result {
         div.append(highScoresTable)
 
         document.querySelector(".container").appendChild(div)
-        
+          
 
     }
+  
 
 }
+
+

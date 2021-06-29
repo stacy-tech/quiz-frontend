@@ -19,14 +19,15 @@ class QuizApi {
 
 
     getResults() {
-        
         fetch(this.baseUrl + "/results")
         .then(res => res.json())
-        .then (results => results.forEach(result=> {
+        .then (results => results.forEach(result => {
             const resultObject = new Result(result)
-            quizObject.render()
+            resultObject.render()
             
-        })) 
+        }))
+        
+    
     }
 
     

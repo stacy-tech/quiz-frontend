@@ -1,6 +1,5 @@
 class Quiz {
     static quizzes = []
-    static score = 0
     constructor({id, name, description}) {
         this.name = name
         this.id = id
@@ -22,7 +21,7 @@ class Quiz {
         div.addEventListener("click", this.renderQuestions.bind(this))
 
         document.querySelector(".container").appendChild(div)
-        
+
         
     }
 
@@ -60,7 +59,7 @@ class Quiz {
          <h1 id ="quiz-${this.id}">Test your Knowledge of ${this.name}</h1>
              <div id="questions">
                 <h3>Questions</h3>
-                <button id="score-btn" class="score-btn btn">Score</button>
+                 <a href="/high scores" id="highscore-btn" class="btn">High Scores</a>
                 <ul></ul>
                 
             </div>
@@ -95,4 +94,6 @@ class Quiz {
 
 
     }
+
+    
 }
