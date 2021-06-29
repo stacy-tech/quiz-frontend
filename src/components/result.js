@@ -29,7 +29,7 @@ class Result{
         })
         
         div.append(highScoresTable)
-        debugger
+        
 
         document.querySelector(".container").appendChild(div)  
             
