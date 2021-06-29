@@ -22,11 +22,9 @@ class QuizApi {
         fetch(this.baseUrl + "/results")
         .then(res => res.json())
         .then (results => results.forEach(result => {
-            const resultObject = new Result(result)
-            resultObject.render()
-            
+            new Result(result)
+               
         }))
-        
     
     }
 

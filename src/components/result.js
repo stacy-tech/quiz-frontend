@@ -8,8 +8,9 @@ class Result{
         Result.results.push(this)
     }
 
-    render() {
-        
+    static highScores(e) {
+        e.preventDefault()
+        ResultApi.postResult(e.target)
         const div = document.createElement("div") 
         const h4 = document.createElement("h4")
         const p = document.createElement("p")
@@ -24,18 +25,24 @@ class Result{
 
         Result.results.map((result) => {
             console.log("result", result)
-            highScoresTable.innerHTML += "<tr><td>" +  result.name  + "</td><td>" + result.score + "</td></tr>"
-            
+            highScoresTable.innerHTML += "<tr><td>" +  result.name  + "</td><td>" + result.score + "</td></tr>"    
         })
         
         div.append(highScoresTable)
+        debugger
 
-        document.querySelector(".container").appendChild(div)
-          
-
+        document.querySelector(".container").appendChild(div)  
+            
     }
-  
+
+    calculateScore(){
+        const SCORE_POINTS = 100
+        const MAX_QUESTIONS = 10
+    }
 
 }
+    
+
+
 
 

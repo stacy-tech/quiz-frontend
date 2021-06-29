@@ -59,15 +59,18 @@ class Quiz {
          <h1 id ="quiz-${this.id}">Test your Knowledge of ${this.name}</h1>
              <div id="questions">
                 <h3>Questions</h3>
-                 <a href="/high scores" id="highscore-btn" class="btn">High Scores</a>
+        
                 <ul></ul>
                 
             </div>
 
-            <button id="done-btn" class="done-btn btn"><a href ="(this.baseUrl + "/results")">Done</a></button>
+            <button id="submit-btn" class="submit-btn btn">Submit</button>
             
-    
+
         `
+        document.getElementById("submit-btn").addEventListener('click',Result.highScores )
+
+
         var filteredQuestions = Question.questions.filter(question => question.quiz_id === this.id)
         
         
@@ -91,6 +94,7 @@ class Quiz {
         for (var i = 0; i < answerButtonClass.length; i++) {
             answerButtonClass[i].addEventListener('click', this.answerQuestionRef)
         }
+
 
 
     }
