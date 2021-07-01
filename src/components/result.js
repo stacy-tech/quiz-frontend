@@ -8,9 +8,10 @@ class Result{
         Result.results.push(this)
     }
 
-    static highScores(e) {
-        e.preventDefault()
-        ResultApi.postResult(e.target)
+    static submitResult(score, name) {
+        console.log('submitting score... ', score)
+        console.log('submitting name... ', name)
+        ResultApi.postResult(score, name)
         const div = document.createElement("div") 
         const h4 = document.createElement("h4")
         const p = document.createElement("p")
@@ -33,11 +34,6 @@ class Result{
 
         document.querySelector(".container").appendChild(div)  
             
-    }
-
-    calculateScore(){
-        const SCORE_POINTS = 100
-        const MAX_QUESTIONS = 10
     }
 
 }

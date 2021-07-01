@@ -5,6 +5,7 @@ class Quiz {
         this.id = id
         this.description = description
         this.answerQuestionRef = this.answerQuestion.bind(this)
+        this.score = 0;
         Quiz.quizzes.push(this)
     }
 
@@ -35,12 +36,12 @@ class Quiz {
         if(currentQuestionList[0].answer === chosenAnswer) {
             // alert('Correct')
             event.target.style.background = 'yellow'
-            Quiz.score += 1
+            this.score += 10
+            console.log('tracking score', this.score)
         }
         else {
             // alert('Incorrect')
             event.target.style.background = 'red'
-            Quiz.score -= 1
         }
         
 
@@ -68,7 +69,7 @@ class Quiz {
             
 
         `
-        document.getElementById("submit-btn").addEventListener('click',Result.highScores )
+        document.getElementById("submit-btn").addEventListener('click', e => Result.submitResult(this.score, this.name))
 
 
         var filteredQuestions = Question.questions.filter(question => question.quiz_id === this.id)

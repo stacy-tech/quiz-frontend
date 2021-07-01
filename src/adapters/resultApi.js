@@ -1,15 +1,19 @@
 class ResultApi{
     debugger
-    static postResult(target) {
-        fetch('http://localhost/3000/result', {
+    static postResult(score, name) {
+        console.log('posting score... ', score)
+        console.log('post name... ', name)
+        fetch('http://localhost:3000/results', {
             method: 'POST',
             headers: {
                 "Content_Type": 'application/json',
-                "Accept": 'application/json'
+                
             },
             body: JSON.stringify({
-                name: "",
-                score: ""
+                result: {
+                    name: name,
+                    score: score
+                }
             })
             
         })
